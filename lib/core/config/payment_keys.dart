@@ -1,24 +1,20 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class PaymentKeys {
   //Stripe
-  static const String stripePublishableKey =
-      'pk_test_51Rvlb242s5xfkrYJ10b4e1VGMoGeVqH55k7aaIJZi5PFU6gZsdlCH9Y7LIdcmFabg98RhOsKRDpzRCBfs6x3VOys00L3gnXsUU';
-  static const String stripeSecretKey =
-      'sk_test_51Rvlb242s5xfkrYJdB8GfWy3ABpyg7lqXYmhCsFL2Q4HIIazYHns4Rl0xYotSWyYgTNfpA53VicOK0BSRXfipfk800odxdZrIe';
+  static String get stripePublishableKey => dotenv.env['STRIPE_PUBLISHABLE_KEY'] ?? '';
+  static String get stripeSecretKey => dotenv.env['STRIPE_SECRET_KEY'] ?? '';
   //PayPal
-  static const String paypalClientId =
-      'AYMP3MoMmHGyKyAYHbvJTqrdpQr8v_eCQEbTtW9gtOksYjVZxtgScUPHlhCzExYQVbixeYjm7kwmegBW';
-  static const String paypalSecretkey =
-      'EMckYqDLWu84zT9VQDbEdyHGOuqylN0vMhiGpeMh1CFZ3EER0-zAzj_6B3CWJa-TwjbsHDwv1Fv0wj3t';
+  static String get paypalClientId => dotenv.env['PAYPAL_CLIENT_ID'] ?? '';
+  static String get paypalSecretkey => dotenv.env['PAYPAL_SECRET_KEY'] ?? '';
 
   //Paymob
-  static const String paymobApiKey =
-      'ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2TVRBM016YzNOaXdpYm1GdFpTSTZJbWx1YVhScFlXd2lmUS4yVG85V0ZndGZZdzV0SnExRkg1aGp3bEFFZE51MkdTTENwOEVmOHNLRk5WdjJ1aFVLTWdSR0RfREIwSnBfYmQwVmxOb0p5UHdxc0tHemRocHdIazBoUQ==';
-  static const String paymobSecretKey =
-      'egy_sk_test_83c13445181e611e37b654b94efbda12816ecd74579b6bfa1cfb277915007be4';
-  static const int paymobKioskIntegrationId = 5298077;
-  static const int paymobWalletIntegrationId = 5298075;
-  static const int paymobCardIntegrationId = 5265249;
-  static const int paymobIFrameId = 956280;
+  static String get paymobApiKey => dotenv.env['PAYMOB_API_KEY'] ?? '';
+  static String get paymobSecretKey => dotenv.env['PAYMOB_SECRET_KEY'] ?? '';
+  static int get paymobKioskIntegrationId => int.tryParse(dotenv.env['PAYMOB_KIOSK_INTEGRATION_ID'] ?? '') ?? 0;
+  static int get paymobWalletIntegrationId => int.tryParse(dotenv.env['PAYMOB_WALLET_INTEGRATION_ID'] ?? '') ?? 0;
+  static int get paymobCardIntegrationId => int.tryParse(dotenv.env['PAYMOB_CARD_INTEGRATION_ID'] ?? '') ?? 0;
+  static int get paymobIFrameId => int.tryParse(dotenv.env['PAYMOB_IFRAME_ID'] ?? '') ?? 0;
 }
 
 //paypal
