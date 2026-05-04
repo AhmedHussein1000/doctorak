@@ -30,18 +30,22 @@ class UserInfoHeader extends StatelessWidget {
               alignment: Alignment.bottomRight,
               children: [
                 CircleAvatar(
-                  radius: 40.r,
+                  radius: 50.r,
                   backgroundColor: AppColors.primaryBlue.withValues(alpha: 0.1),
-                  backgroundImage: avatarPath != null
-                      ? FileImage(File(avatarPath!))
-                      : null,
-                  child: avatarPath == null
-                      ? Icon(
-                          Icons.person,
-                          size: 40.sp,
-                          color: AppColors.primaryBlue,
+                  child: avatarPath != null
+                      ? ClipOval(
+                          child: Image.file(
+                            File(avatarPath!),
+                            width: 100.r,
+                            height: 100.r,
+                            fit: BoxFit.cover,
+                          ),
                         )
-                      : null,
+                      : Icon(
+                          Icons.person,
+                          size: 50.sp,
+                          color: AppColors.primaryBlue,
+                        ),
                 ),
                 allowEdit == true
                     ? CircleAvatar(

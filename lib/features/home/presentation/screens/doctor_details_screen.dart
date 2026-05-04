@@ -46,7 +46,7 @@ class DoctorDetailsScreen extends StatelessWidget {
               },
               buttonText: 'Make An Appointment',
             ),
-            SizedBox(height: 16.h),
+            SizedBox(height: kBottomNavigationBarHeight + 16.h),
           ],
         ),
       ),

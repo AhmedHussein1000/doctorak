@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:doctorak/core/errors/api_error_handler.dart';
-import 'package:doctorak/core/helpers/extensions.dart';
 import 'package:doctorak/core/network/api_error_model.dart';
 import 'package:doctorak/core/network/api_result.dart';
 import 'package:doctorak/features/appointments/data/data_sources/appointments_remote_data_source.dart';
@@ -44,12 +43,9 @@ class AppointmentsRepositoryImpl extends BaseAppointmentsRepository {
     try {
       final myAppointmentsResponseModel =
           await _baseAppointmentsRemoteDataSource.getMyAppointments();
-      if(!myAppointmentsResponseModel.appointmentsData.isNullOrEmpty()){
-        return Success(
-          myAppointmentsResponseModel.appointmentsData!.map((e) => e.toEntity()).toList(),
-        );
-      }
-      return Failure(ApiErrorModel(message: 'Appointments not found'));
+      return Success(
+        myAppointmentsResponseModel.appointmentsData?.map((e) => e.toEntity()).toList() ?? [],
+      );
     } catch (e) {
       log('AppointmentsRepositoryImpl.getMyAppointments ${e.toString()}');
       final apiErrorModel = ApiErrorHandler.handle(e);

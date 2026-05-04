@@ -96,16 +96,17 @@ class AppointmentCardWidget extends StatelessWidget {
             ? Colors.transparent
             : AppColors.primaryBlue,
         shape: RoundedRectangleBorder(
-          
-          side: BorderSide(color: AppColors.primaryBlue,),
+          side: BorderSide(color: AppColors.primaryBlue),
           borderRadius: BorderRadius.circular(24.r),
         ),
         padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 8.w),
       ),
-      child: Text(
-        isCancelButton ? 'Cancel Appointment' : 'Reschedule',
-        style: Styles.font12SemiBold.copyWith(
-          color: isCancelButton ? AppColors.primaryBlue : Colors.white,
+      child: FittedBox(
+        child: Text(
+          isCancelButton ? 'Cancel Appointment' : 'Reschedule',
+          style: Styles.font12SemiBold.copyWith(
+            color: isCancelButton ? AppColors.primaryBlue : Colors.white,
+          ),
         ),
       ),
     );

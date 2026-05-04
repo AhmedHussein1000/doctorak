@@ -66,13 +66,16 @@ class BookingStepperHeader extends StatelessWidget {
 
   Widget _buildDivider(int stepIndex) {
     final bool isCompleted = currentStep > stepIndex;
-    return Container(
-      width: 49.w,
-      height: 2.h,
-      margin: EdgeInsets.only(bottom: 20.h, left: 16.w, right: 16.w),
-      decoration: BoxDecoration(
-        color: isCompleted ? AppColors.successGreen : AppColors.textLighterGrey,
-        borderRadius: BorderRadius.circular(14.r),
+    return Expanded(
+      child: Container(
+        height: 2.h,
+        margin: EdgeInsets.only(bottom: 20.h, left: 8.w, right: 8.w),
+        decoration: BoxDecoration(
+          color: isCompleted
+              ? AppColors.successGreen
+              : AppColors.textLighterGrey,
+          borderRadius: BorderRadius.circular(14.r),
+        ),
       ),
     );
   }

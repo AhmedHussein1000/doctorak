@@ -36,7 +36,7 @@ class BookAppointmentDateTimeStep extends StatelessWidget {
         ),
         SizedBox(height: 16.h),
         _buildTimeSlots(),
-        SizedBox(height: 10.h),
+        SizedBox(height: 16.h),
       ],
     );
   }

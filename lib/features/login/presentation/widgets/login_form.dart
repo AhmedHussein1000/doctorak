@@ -86,6 +86,7 @@ class _LoginFormAndActionButtonsState extends State<LoginFormAndActionButtons> {
             child: CustomTextButton(
               buttonText: 'Forgot Password?',
               onPressed: () {
+
                 //todo forgot password screen
               },
             ),

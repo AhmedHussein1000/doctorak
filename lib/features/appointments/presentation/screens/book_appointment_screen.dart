@@ -177,7 +177,7 @@ class _BookAppointmentScreenContentState
               currentStep: _currentStep,
               onNextStep: _nextStep,
             ),
-            SizedBox(height: 16.h),
+            SizedBox(height: kBottomNavigationBarHeight),
           ],
         ),
       ),

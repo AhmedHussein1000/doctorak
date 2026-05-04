@@ -67,6 +67,7 @@ dependencies:
 
 
 dev_dependencies:
+  sentry_dart_plugin: ^3.3.0
   bloc_test: any
   build_runner: ^2.4.13
   flutter_lints: ^6.0.0
@@ -129,3 +130,9 @@ flutter_launcher_icons:
   image_path: "assets/images/app_icon.png"
   adaptive_icon_background: "#FFFFFF"
   adaptive_icon_foreground: "assets/images/foreground_icon.png"  
+
+sentry:
+  upload_debug_symbols: true
+  upload_source_maps: true
+  project: flutter
+  org: ahmed-hussein-xt
