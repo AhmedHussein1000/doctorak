@@ -2,18 +2,6 @@
 class Assets {
   Assets._();
   
-  /// Assets for fontsInterBold
-  /// assets/fonts/Inter-Bold.ttf
-  static const String fontsInterBold = "assets/fonts/Inter-Bold.ttf";
-
-  /// Assets for fontsInterMedium
-  /// assets/fonts/Inter-Medium.ttf
-  static const String fontsInterMedium = "assets/fonts/Inter-Medium.ttf";
-
-  /// Assets for fontsInterRegular
-  /// assets/fonts/Inter-Regular.ttf
-  static const String fontsInterRegular = "assets/fonts/Inter-Regular.ttf";
-
   /// Assets for imagesAppIcon
   /// assets/images/app_icon.png
   static const String imagesAppIcon = "assets/images/app_icon.png";
@@ -31,8 +19,8 @@ class Assets {
   static const String imagesConfirmed = "assets/images/confirmed.png";
 
   /// Assets for imagesDoctor
-  /// assets/images/doctor.png
-  static const String imagesDoctor = "assets/images/doctor.png";
+  /// assets/images/doctor.webp
+  static const String imagesDoctor = "assets/images/doctor.webp";
 
   /// Assets for imagesForegroundIcon
   /// assets/images/foreground_icon.png
@@ -71,8 +59,8 @@ class Assets {
   static const String imagesNavBarsNavSearch = "assets/images/nav_bars/nav_search.svg";
 
   /// Assets for imagesOnboardingDoctor
-  /// assets/images/onboarding_doctor.png
-  static const String imagesOnboardingDoctor = "assets/images/onboarding_doctor.png";
+  /// assets/images/onboarding_doctor.webp
+  static const String imagesOnboardingDoctor = "assets/images/onboarding_doctor.webp";
 
   /// Assets for imagesSpecializationsCardiology
   /// assets/images/specializations/Cardiology.png
