@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "651205078509",
+    "project_id": "doctorak-c6554",
+    "storage_bucket": "doctorak-c6554.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651205078509:android:fb93b1db321655d2660be4",
+        "android_client_info": {
+          "package_name": "com.example.doctorak"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsYby-aS-X4HAFWS_fl4wlFs7i5z2vxNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
