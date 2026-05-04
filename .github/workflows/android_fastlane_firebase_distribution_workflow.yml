@@ -42,6 +42,9 @@ jobs:
           bundler-cache: true
           working-directory: android
         
+      - name: Create .env file
+        run: echo "${{secrets.ENV_FILE}}" > .env
+
       - name: Build and Distribute App
         env:
           FIREBASE_APP_ID: ${{secrets.FIREBASE_APP_ID}}
